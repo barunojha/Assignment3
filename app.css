@@ -1,0 +1,9 @@
+nav{
+    background-color:rgb(225, 201, 241);
+}
+
+.portfolio__logo{
+    background-color: red;
+    display: grid;
+    padding: 50 50 50 50;
+}
