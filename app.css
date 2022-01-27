@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
 /* Body Style */
 
 body{
@@ -7,6 +13,11 @@ body{
     font-family: sans-serif;
     font-size: 1.125rem;
     line-height: 1.6;
+}
+
+img{
+    display: block;
+    max-width: 100%;
 }
 
 section{
@@ -39,6 +50,7 @@ h3{
 
 .section__title--intro{
     font-weight: lighter;
+    margin-top: 50%;
 }
 
 .section__subtitle{
@@ -49,13 +61,16 @@ h3{
 .section__subtitle--intro,
 .section__subtitle--about{
     background-color: maroon;
+    padding: .25em 1em;
     font-family: monospace;
     color: lightskyblue;
     margin-bottom: 1em;
+    font-size: 14px;
 }
 
 strong{
     font-weight: bold;
+    font-size: xx-large;
 }
 
 .section__title--intro strong{
@@ -65,5 +80,82 @@ strong{
 /* Intro Section */
 
 .intro{
+    position: relative;
+}
 
+@media (min-width: 600px) {
+    .intro{
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        grid-column-gap: 1em;
+        grid-template-areas: 
+            "img title"
+            "img subtitle";
+        grid-template-columns: min-content max-content;
+    }   
+
+    .intro__img{
+        grid-area: img;
+        min-width: 250px;
+        position: relative;
+        z-index: 2;
+        box-shadow: 0.25em 0.25em 0.75em rgba(0,0,0,.25);
+    }
+
+    .section__subtitle--intro{
+        align-self: start;
+        grid-column: -1 / 1;
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        left: -1.5em;
+        width: calc(100% + 1.5em);
+    }
+}
+
+/* My Services */
+
+.my__services{
+    background-color: lightskyblue;
+    background-size: cover;
+    color: maroon;
+    text-align: center;
+}
+
+.section__title--services{
+    color: maroon;
+    position: relative;
+}
+
+.section__title--services::after{
+    content: '';
+    display: block;
+    width: 10%;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: currentColor;
+    opacity: 0.75;
+}
+
+.service{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+    .services{
+        display: flex;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .service + .service{
+        margin-left: 2em;
+    }
+}
+
+.about__me{
+    background: lightskyblue;
 }
