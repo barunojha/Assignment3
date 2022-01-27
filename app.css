@@ -59,7 +59,8 @@ h3{
 }
 
 .section__subtitle--intro,
-.section__subtitle--about{
+.section__subtitle--about,
+.section__subtitle--work{
     background-color: maroon;
     padding: .25em 1em;
     font-family: monospace;
@@ -75,6 +76,99 @@ strong{
 
 .section__title--intro strong{
     display: block;
+}
+
+/* Header */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+.portfolio_name{
+    max-width: 100;
+}
+
+.nav{
+    position: fixed;
+    background: maroon;
+    color: lightskyblue;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    transform: translate(100%);
+    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+}
+
+.nav__list{
+    list-style: none;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__link{
+    color: inherit;
+    font-weight: bold;
+    font-size: 1.75rem;
+    text-decoration: none;
+}
+
+.nav__link:hover{
+    color: #111;
+}
+
+.nav_toggle{
+    padding: .5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+}
+
+.nav-open .nav{
+    transform: translateX(0);
+}
+
+.nav_button{
+    display: block;
+    position: relative;
+}
+
+.nav_button,
+.nav_button::before,
+.nav_button::after{
+    background: green;
+    width: 2em;
+    height: 2px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+}
+
+.nav_button::before,
+.nav_button::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.nav_button::before{
+    top: 6px;
+}
+
+.nav_button::after{
+    bottom: 6px;
 }
 
 /* Intro Section */
@@ -156,6 +250,44 @@ strong{
     }
 }
 
+/* About Me */
+
 .about__me{
     background: lightskyblue;
+}
+
+.section__title--about{
+    text-align: center;
+}
+
+/* Work */
+
+.section__title--work{
+    text-align: center;
+}
+
+.portfolio{
+    text-align: center;
+}
+
+/* Footer */
+
+.footer{
+    background: #111;
+    color: lightskyblue;
+    text-align: center;
+    padding: 2.5em 0;
+}
+
+.footer a {
+    color: inherit;
+}
+
+.footer__link:hover,
+.social__list--link:hover{
+    opacity: .7;
+}
+
+.social__list{
+    list-style: none;
 }
