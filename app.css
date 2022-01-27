@@ -1,9 +1,69 @@
-nav{
-    background-color:rgb(225, 201, 241);
+/* Body Style */
+
+body{
+    background-color: lightskyblue;
+    color: maroon;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.6;
 }
 
-.portfolio__logo{
-    background-color: red;
-    display: grid;
-    padding: 50 50 50 50;
+section{
+    padding: 5em 2em;
+}
+/* Headlines */
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+    margin: 0;
+}
+
+h1{
+    font-size: 4.5 rem;
+}
+
+h2{
+    font-size: 3.75rem;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+.section__title{
+    margin-bottom: .25em;
+}
+
+.section__title--intro{
+    font-weight: lighter;
+}
+
+.section__subtitle{
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.section__subtitle--intro,
+.section__subtitle--about{
+    background-color: maroon;
+    font-family: monospace;
+    color: lightskyblue;
+    margin-bottom: 1em;
+}
+
+strong{
+    font-weight: bold;
+}
+
+.section__title--intro strong{
+    display: block;
+}
+
+/* Intro Section */
+
+.intro{
+
 }
