@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /* Body Style */
 
 body{
@@ -87,6 +91,7 @@ header{
 }
 .portfolio_name{
     max-width: 100;
+    font-weight: bold;
 }
 
 .nav{
@@ -138,6 +143,22 @@ header{
 
 .nav-open .nav{
     transform: translateX(0);
+}
+
+.nav-open .nav_toggle{
+    position: fixed;
+}
+
+.nav-open .nav_button{
+    transform: rotate(.625turn);
+}
+
+.nav-open .nav_button::before{
+    transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .nav_button::after{
+    opacity: 0;
 }
 
 .nav_button{
